@@ -7,13 +7,13 @@
  */
 int main(void)
 {
-	char c[] = "alphabet_";
-	int i = sizeof(c);
+	char letter = 'z';
 
-	do {
-		--i;
-		putchar(c[i]);
-	} while (i > 0);
+	while (letter >= 'a')
+	{
+		putchar(letter);
+		letter--;
+	}
 	putchar('\n');
 
 	return (0);
