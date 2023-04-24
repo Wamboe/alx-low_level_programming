@@ -2,7 +2,11 @@
 #include <time.h>
 #include <stdio.h>
 
-/* betty style doc for function main goes there */
+/**
+ * main - Function that produces random numbers
+ *
+ * Return: Always zero for success
+ */
 int main(void)
 {
 	int n;
