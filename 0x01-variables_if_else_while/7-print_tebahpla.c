@@ -10,12 +10,10 @@ int main(void)
 	char c[] = "alphabet_";
 	int i = sizeof(c);
 
-	do
-	{
+	do {
 		--i;
 		putchar(c[i]);
-	}
-	while(i > 0);
+	} while (i > 0);
 	putchar('\n');
 
 	return (0);
