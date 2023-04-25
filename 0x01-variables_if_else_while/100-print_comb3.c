@@ -19,7 +19,7 @@ int main(void)
 			putchar(n + '0');
 			putchar(m + '0');
 			m++;
-			if( n != 8)
+			if (n != 8)
 			{
 				putchar(',');
 				putchar(' ');
@@ -28,5 +28,7 @@ int main(void)
 		n++;
 	}
 	putchar('\n');
+	return (0);
+
 }
 
