@@ -1,6 +1,11 @@
 #include "main.h"
 
-/***/
+/**
+ * print_last_digit - fetcjing the last digit
+ *
+ * @i: int being checked
+ * Return: the last digit of a number
+ */
 int print_last_digit(int i)
 {
 	int r;
@@ -11,7 +16,7 @@ int print_last_digit(int i)
 	}
 
 	r = i % 10;
-	_putchar(r+'0');
+	_putchar(r + '0');
 
 	return (r);
 }
