@@ -3,7 +3,7 @@
 /**
  * print_sign - checks whether a character is lowercase
  *
- * @: character being checked
+ * @n: character being checked
  * Return: 1 if i > 0 and 0 if not i == 0 and -1 if i < 0
  */
 int print_sign(int n)
