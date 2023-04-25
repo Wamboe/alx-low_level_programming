@@ -4,4 +4,5 @@ a.out
 2-alphabet_x10
 3-islower
 4-isalpha
+5-sign
 *main.c
