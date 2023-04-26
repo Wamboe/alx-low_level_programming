@@ -1,5 +1,7 @@
 #include "main.h"
 
+void print_delimiters(int j);
+
 /**
  * times_table - 9 times tables
  *
@@ -15,14 +17,9 @@ void times_table(void)
 		{
 			k = i * j;
 
-			if ((j > 0) && (j <= 9))
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
-
 			if ((k / 10) != 0)
 			{
+				print_delimiters(j);
 				while (k != 0)
 				{
 					remainder = k % 10;
@@ -40,10 +37,29 @@ void times_table(void)
 			}
 			else
 			{
-				_putchar(' ');
+				print_delimiters(j);
+				if (j > 0 && j <= 9)
+				{
+					_putchar(' ');
+				}
 				_putchar(k + '0');
 			}
 		}
 		_putchar('\n');
+	}
+}
+
+/**
+ * print_delimiters - prints ", "
+ *
+ * @j: int being checked
+ * Return: nil
+ */
+void print_delimiters(int j)
+{
+	if (j > 0 && j <= 9)
+	{
+		_putchar(',');
+		_putchar(' ');
 	}
 }
