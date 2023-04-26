@@ -1,9 +1,14 @@
 #include "main.h"
 
-/***/
+/**
+ * times_table - 9 times tables
+ *
+ * Return: nil
+ */
 void times_table(void)
 {
 	int i, j, k, remainder, reverse = 0, l, count = 0;
+
 	for (i = 0; i <= 9; i++)
 	{
 		for (j = 0; j <= 9; j++)
@@ -19,7 +24,6 @@ void times_table(void)
 					k = k / 10;
 					count++;
 				}
-				
 				while (count != 0)
 				{
 					l = reverse % 10;
