@@ -5,7 +5,7 @@
  * print_to_98 - print natural numbers
  *
  * @n: starting integer n
- * Return: nil
+ * Return: nil as fcnt i
  */
 void print_to_98(int n)
 {
