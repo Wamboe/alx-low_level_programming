@@ -1,6 +1,7 @@
 #ifndef MAIN_DOT_H
 #define MAIN_DOT_H
 
+void print_times_table(int n);
 int add(int, int);
 int _putchar(char c);
 void print_alphabet(void);
