@@ -31,16 +31,22 @@ void times_table(void)
 					reverse = reverse / 10;
 					count--;
 				}
+				if (j < 9)
+				{
+					_putchar(',');
+					_putchar(' ');
+				}
 			}
 			else
 			{
 				_putchar(k + '0');
-			}
+				if (j < 9)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
 
-			if (j < 9)
-			{
-				_putchar(',');
-				_putchar(' ');
+				}
 			}
 		}
 		_putchar('\n');
