@@ -17,6 +17,11 @@ void times_table(void)
 
 			if ((k / 10) != 0)
 			{
+				if ((j > 0) && (j <= 9))
+				{
+					_putchar(',');
+					_putchar(' ');
+				}
 				while (k != 0)
 				{
 					remainder = k % 10;
@@ -31,22 +36,16 @@ void times_table(void)
 					reverse = reverse / 10;
 					count--;
 				}
-				if (j < 9)
-				{
-					_putchar(',');
-					_putchar(' ');
-				}
 			}
 			else
 			{
-				_putchar(k + '0');
-				if (j < 9)
+				if ((j > 0) && (j <= 9))
 				{
 					_putchar(',');
 					_putchar(' ');
 					_putchar(' ');
-
 				}
+				_putchar(k + '0');
 			}
 		}
 		_putchar('\n');
