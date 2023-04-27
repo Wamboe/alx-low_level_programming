@@ -3,7 +3,7 @@
 /**
  * print_line - draws line
  * @n: size of line
- * Return: n/a 
+ * Return: n/a
  */
 void print_line(int n)
 {
