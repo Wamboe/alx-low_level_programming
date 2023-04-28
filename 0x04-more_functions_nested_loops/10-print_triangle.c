@@ -1,13 +1,14 @@
 #include "main.h"
 
 /**
- * print_diagonal - draws line
- * @n: size of line
+ * print_triangle - draws line
+ * @size: size of line
  * Return: n/a
  */
 void print_triangle(int size)
 {
-	int i,j;
+	int i, j;
+
 	if (size <= 0)
 	{
 		_putchar('\n');
@@ -21,12 +22,11 @@ void print_triangle(int size)
 	{
 		while (size != 0)
 		{
-			
-			for(i = size; i > 0; --i)
+			for (i = size; i > 0; --i)
 			{
 				_putchar(' ');
 			}
-			for(j = 0; j < size ; ++j)
+			for (j = 0; j < size ; ++j)
 			{
 				_putchar('#');
 			}
