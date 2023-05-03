@@ -18,19 +18,23 @@ int _strlen(char *s)
 }
 
 /**
- * puts2 - prints every other char in a string;
+ * puts_half - sets vars to 98;
  * @str: pointer argument
  * Return: n/a
  */
-void puts2(char *str)
+void puts_half(char *str)
 {
 	int len = _strlen(str);
-	int i = 0;
 
-	while ((*(str + i) != '\0') && (i <= len))
+	if (len % 2 != 0)
+		len = (len - 1) / 2;
+	else
+		len = len / 2;
+
+	while (*(str + len) != '\0')
 	{
-		_putchar(*(str + i));
-		i = i + 2;
+		_putchar(*(str + len));
+		len++;
 	}
 	_putchar('\n');
 }
