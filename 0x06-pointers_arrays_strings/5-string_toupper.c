@@ -10,10 +10,11 @@
 char *string_toupper(char *c)
 {
 	while (*c != '\0')
-	{	
+	{
 		if (*c >= 'a' && *c <= 'b')
 		{
 			int i = *c;
+
 			i = i + 32;
 		}
 		c++;
