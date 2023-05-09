@@ -2,34 +2,28 @@
 #include <stdio.h>
 
 /**
- * print_chessboard - prints a chessboard
- * @a: number of rows in a multidimentional array
+ * print_diagsums - prints sum of diagonals of a multidimentional array
+ * @a: multidemntional array
+ * @size: size of an array
  * Return: n/a
  */
 void print_diagsums(int *a, int size)
 {
-	int i = 0, sum = 0, len = size * size, s = size, count = 1;
+	int i = 0, sum = 0, s = size, j = 0;
 
-	while (i <= len)
+	while (i <= (size * size))
 	{
 		sum = sum + a[i];
 		i = i + size + 1;
 	}
-	printf("_____");
-	printf("%d\n", sum);
+	printf("%d, ", sum);
 
-	i = len - size - 1;
-	size = size;
 	sum = 0;
-	while (count <= s)
+	while (s > 0)
 	{
-		printf("a[%d]:%d\n",i, a[i]);
-		sum = sum + a[i];
-		i = i + size;
-		count++;
-		
+		j = j + (size - 1);
+		sum = sum + a[j];
+		s--;
 	}
-	printf("_____");
 	printf("%d\n", sum);
-
 }
