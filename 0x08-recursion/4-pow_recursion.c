@@ -2,9 +2,10 @@
 #include "main.h"
 
 /**
- * _puts_recursion - prints a string
- * @s: string to be printed
- * Return: n/a
+ *  _pow_recursion - prints power of any number
+ * @x: number to be multiplied
+ * @y: power to x
+ * Return: power of x
  */
 int _pow_recursion(int x, int y)
 {
