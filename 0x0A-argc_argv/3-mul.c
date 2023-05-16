@@ -11,40 +11,22 @@
  */
 int main(int argc, char *argv[])
 {
-	int sum = 1, i, len, div = 1, num;
-	char c[] = "Error";
+	int sum = 1, i;
 
 	if (argc < 3)
 	{
-		i = 0;
-		while (*(c + i) != '\0')
-		{
-			_putchar(*(c + i));
-			i++;
-		}
-		_putchar('\n');
+		printf("Error\n");
 		return (1);
 	}
-
 	for (i = 1; i < argc; i++)
 	{
+		if (*argv[i] >= 'a' && *argv[i] <= 'z')
+		{
+			printf("Error\n");
+			return (1);
+		}
 		sum = sum * atoi(argv[i]);
 	}
-
-	len = sizeof(sum) / sizeof(int);
-
-	while (len != 0)
-	{
-		while ((len) != 1)
-		{
-			div *= 10;
-			len--;
-		}
-
-		num = (sum / div) % 10;
-		_putchar(num + 48);
-		len--;
-	}
-
+	printf("%d\n", sum);
 	return (0);
 }
