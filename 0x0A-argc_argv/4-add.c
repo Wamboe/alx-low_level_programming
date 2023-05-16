@@ -21,6 +21,7 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
+			/*checking whether it is a number or a string*/
 			if (*argv[i] >= 'a' && *argv[i] <= 'z')
 			{
 				printf("Error\n");
