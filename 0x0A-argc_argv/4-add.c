@@ -13,9 +13,9 @@ int main(int argc, char *argv[])
 {
 	int sum = 0, i, x;
 
-	if (argc < 1)
+	if (argc < 3)
 	{
-		printf("0\n");
+		printf("%d\n", sum);
 	}
 	else
 	{
