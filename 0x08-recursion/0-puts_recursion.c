@@ -1,19 +1,20 @@
-#include <stdlib.h>
 #include "main.h"
 
 /**
- * _puts_recursion - prints a string
- * @s: string to be printed
- * Return: n/a
- */
+* _puts_recursion - prints a string recussively
+* @s: string to be printed
+* Return: N/A
+*/
 void _puts_recursion(char *s)
 {
-	if (*s == '\0')
+	char x = *s;
+
+	if (x == '\0')
 	{
 		_putchar('\n');
-		exit(0);
+		return;
 	}
-	_putchar(*s);
+	_putchar(x);
 	s++;
 	_puts_recursion(s);
 }
