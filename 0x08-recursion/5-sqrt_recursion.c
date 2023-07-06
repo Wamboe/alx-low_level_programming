@@ -2,39 +2,17 @@
 
 int _sqrt_recursion(int n)
 {
-    int h, l, r;
+    double i = 0;
+    double j = n / 2;
 
-    if (n < 0)
+    while (j != i) 
     {
-        return(-1);
+        i = j;
+        j = (n / i + i) / 2;
     }
 
-    if (n == 1)
-    {
-        return(1);
-    }
+    if (j == 0)
+    return (-1);
 
-    h = n;
-    l = n / 2;
-
-    if ((l * l) > n)
-    {
-        _sqrt_recursion(l);
-    }
-    else if ((l * l)< n)
-    {
-        for(;h>l;h--)
-        {
-            if ((h * h) == n)
-            {
-                r = h;
-                break;
-            }
-
-            if ((h * h) < n)
-            return (-1);
-        }
-    }
-
-    return (r);
+    return (j);
 }
