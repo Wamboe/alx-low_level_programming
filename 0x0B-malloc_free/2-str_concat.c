@@ -2,6 +2,7 @@
 #include <limits.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include "main.h"
 
 /**
  * *str_concat - returns a pointer to a newly allocated space in memory
@@ -15,17 +16,13 @@ char *str_concat(char *s1, char *s2)
 	int i = 0;
 
 	if (s1 == NULL)
-	{
 		s1 = "";
-	}
 
 	if (s2 == NULL)
-	{
 		s2 = "";
-	}
 
 	if ((s1[0] == '\0') && (s2[0] == '\0'))
-		return (0);
+		return ("");
 
 	c = malloc((strlen(s1) + strlen(s2) + 1) * sizeof(char));
 	if (c == NULL)
