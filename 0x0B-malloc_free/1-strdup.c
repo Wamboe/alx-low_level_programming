@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * _strdup - copys a string to another
@@ -9,7 +10,7 @@
 char *_strdup(char *str)
 {
 	char *ch;
-	int len = sizeof(str), i = 0;
+	int len = sizeof(str) - 1, i = 0;
 
 	if (len == 1)
 	{
