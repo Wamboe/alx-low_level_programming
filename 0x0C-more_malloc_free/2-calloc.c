@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * _calloc - simulation of calloc
@@ -9,7 +10,7 @@
 */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int *c, i;
+	unsigned int *c;
 
 	if (nmemb <= 0 || size <= 0)
 		return (NULL);
@@ -18,7 +19,8 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (c == NULL)
 		return (NULL);
 
-	for (i = 0; i <= nmemb * size; i++)
-		c[i] = 0;
+	/*for (i = 0; i <= nmemb * size; i++)
+		c[i] = 0;*/
+    memset(c, 0, nmemb * size);
 	return (c);
 }
