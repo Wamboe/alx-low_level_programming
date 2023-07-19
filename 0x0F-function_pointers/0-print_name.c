@@ -1,12 +1,13 @@
+#include "function_pointers.h"
+
 /**
- * print_name - prints a name
+ * print_name - prints name passed to parameter
  * @name: name to be printed
- * @f: function passed to printname fxn
+ * @f: function to print name
  * Return: n/a
- */
+*/
 void print_name(char *name, void (*f)(char *))
 {
-	void (*p)(char *) = f;
-
-	p(name);
+	void (*ptrFunc)(char *) = f;
+	ptrFunc(name);
 }
