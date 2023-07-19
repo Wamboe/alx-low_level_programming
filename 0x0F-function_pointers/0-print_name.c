@@ -1,4 +1,5 @@
 #include "function_pointers.h"
+#include <stdlib.h>
 
 /**
  * print_name - prints name passed to parameter
@@ -8,7 +9,5 @@
 */
 void print_name(char *name, void (*f)(char *))
 {
-	void (*ptrFunc)(char *) = f;
-
-	ptrFunc(name);
+	f(name);
 }
