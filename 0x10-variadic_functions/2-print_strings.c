@@ -1,14 +1,14 @@
 #include <stdarg.h>
-#include <stddef.h>
 #include <stdio.h>
+#include <stddef.h>
 
 /**
- * print_numbers - function that prints numbers
+ * print_strings - function that prints strings
  * @separator: delimiter
  * @n: count of args
  * Return: n/a
 */
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list ap;
 	unsigned int i = 0;
@@ -19,7 +19,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_start(ap, n);
 	while (i < n)
 	{
-		printf("%d", va_arg(ap, unsigned int));
+		printf("%s", va_arg(ap, char *));
 		if (i != n - 1)
 			printf("%s", separator);
 		else
