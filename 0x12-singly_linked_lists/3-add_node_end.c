@@ -1,6 +1,6 @@
 #include "lists.h"
 
-void free_list(list_t *head)
+void free_list(list_t *head);
 
 /**
  * add_node_end - adds a node at the end
@@ -10,36 +10,35 @@ void free_list(list_t *head)
 */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new_node = NULL, *current = NULL;
+	list_t *firstNode = NULL, *current = NULL;
 
 	if (str == NULL)
 		return (NULL);
 
-	new_node = (list_t *)malloc(sizeof(list_t));
-	if (new_node == NULL)
+	firstNode = malloc(sizeof(list_t));
+	if (firstNode == NULL)
 		return (NULL);
 
-	new_node->str = strdup(str);
-	if (new_node->str == NULL)
+	firstNode->str = strdup(str);
+	if (firstNode->str == NULL)
 	{
-		free(new_node);
+		free(firstNode);
 		return (NULL);
 	}
 
-	new_node->len = strlen(str);
-	new_node->next = NULL;
+	firstNode->len = strlen(str);
+	firstNode->next = NULL;
 
 	if (*head == NULL)
-		*head = new_node;
+		*head = firstNode;
 	else
 	{
 		current = *head;
 		while (current->next != NULL)
 			current = current->next;
-		current->next = new_node;
+		current->next = firstNode;
 	}
-
-	return (new_node);
+	return (firstNode);
 }
 
 /**
